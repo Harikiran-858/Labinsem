@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form</title>
+</head>
+
+<body style="background-color: lightblue;">
+
+<center>
+    <h2>Signup</h2>
+
+    <form onsubmit="return signup()">
+        Username:
+        <input type="text" id="username" required>
+        <br><br>
+
+        Password:
+        <input type="password" id="password" required>
+        <br><br>
+
+        Email:
+        <input type="email" id="email" required>
+        <br><br>
+
+        <button type="submit">Signup</button>
+    </form>
+</center>
+
+<script>
+function signup() {
+    var username = document.getElementById("username").value.trim();
+    var password = document.getElementById("password").value.trim();
+    var email = document.getElementById("email").value.trim();
+
+    if (username === "" || password === "" || email === "") {
+        alert("Please fill all fields");
+    }
+    else {
+        alert("Signup successful");
+    }
+
+    return false;
+}
+</script>
+
+</body>
+</html>
+```
